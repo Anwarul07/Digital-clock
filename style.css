@@ -48,5 +48,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
- backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+}
+.clock span {
+  font-size: 80px;
+  width: 110px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+}
+.clock span::after {
+  font-size: 16px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#hours::after {
+  content: "Hours";
+}
+#min::after {
+  content: "Min";
+}
+#sec::after {
+  content: "Sec";
 }
